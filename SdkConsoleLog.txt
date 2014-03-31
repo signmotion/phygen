@@ -1,0 +1,171 @@
+  CL_DEVICE_NAME: 			GeForce 8800 GTS
+  CL_DEVICE_VENDOR: 			NVIDIA Corporation
+  CL_DRIVER_VERSION: 			285.62
+  CL_DEVICE_VERSION: 			OpenCL 1.0 CUDA
+  CL_DEVICE_TYPE:			CL_DEVICE_TYPE_GPU
+  CL_DEVICE_MAX_COMPUTE_UNITS:		12
+  CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS:	3
+  CL_DEVICE_MAX_WORK_ITEM_SIZES:	512 / 512 / 64 
+  CL_DEVICE_MAX_WORK_GROUP_SIZE:	512
+  CL_DEVICE_MAX_CLOCK_FREQUENCY:	1350 MHz
+  CL_DEVICE_ADDRESS_BITS:		32
+  CL_DEVICE_MAX_MEM_ALLOC_SIZE:		128 MByte
+  CL_DEVICE_GLOBAL_MEM_SIZE:		320 MByte
+  CL_DEVICE_ERROR_CORRECTION_SUPPORT:	no
+  CL_DEVICE_LOCAL_MEM_TYPE:		local
+  CL_DEVICE_LOCAL_MEM_SIZE:		16 KByte
+  CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE:	64 KByte
+  CL_DEVICE_QUEUE_PROPERTIES:		CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE
+  CL_DEVICE_QUEUE_PROPERTIES:		CL_QUEUE_PROFILING_ENABLE
+  CL_DEVICE_IMAGE_SUPPORT:		1
+  CL_DEVICE_MAX_READ_IMAGE_ARGS:	128
+  CL_DEVICE_MAX_WRITE_IMAGE_ARGS:	8
+  CL_DEVICE_SINGLE_FP_CONFIG:		INF-quietNaNs round-to-nearest round-to-zero round-to-inf fma 
+
+  CL_DEVICE_IMAGE <dim>			2D_MAX_WIDTH	 4096
+					2D_MAX_HEIGHT	 16383
+					3D_MAX_WIDTH	 2048
+					3D_MAX_HEIGHT	 2048
+					3D_MAX_DEPTH	 2048
+
+  CL_DEVICE_EXTENSIONS:			cl_khr_byte_addressable_store
+					cl_khr_icd
+					cl_khr_gl_sharing
+					cl_nv_d3d9_sharing
+					cl_nv_d3d10_sharing
+					cl_khr_d3d10_sharing
+					cl_nv_d3d11_sharing
+					cl_nv_compiler_options
+					cl_nv_device_attribute_query
+					cl_nv_pragma_unroll
+
+
+  CL_DEVICE_COMPUTE_CAPABILITY_NV:	1.0
+  NUMBER OF MULTIPROCESSORS:		12
+  NUMBER OF CUDA CORES:			96
+  CL_DEVICE_REGISTERS_PER_BLOCK_NV:	8192
+  CL_DEVICE_WARP_SIZE_NV:		32
+  CL_DEVICE_GPU_OVERLAP_NV:		CL_FALSE
+  CL_DEVICE_KERNEL_EXEC_TIMEOUT_NV:	CL_TRUE
+  CL_DEVICE_INTEGRATED_MEMORY_NV:	CL_FALSE
+  CL_DEVICE_PREFERRED_VECTOR_WIDTH_<t>	CHAR 1, SHORT 1, INT 1, LONG 1, FLOAT 1, DOUBLE 0
+
+
+
+ !!! Error # -11 at file d:\projects\workspace\phygen\phygen.cpp, line 262
+
+
+-----------------------------------------------------------
+
+Build Log:
+In file included from :8:
+D:/Projects/workspace/phygen/resource/OpenCL/interaction/vacuum.hcl:16:5: error: use of undeclared identifier 'wpT'
+    wpT[iSelf] = wp[iSelf];
+    ^
+D:/Projects/workspace/phygen/resource/OpenCL/interaction/vacuum.hcl:17:5: error: use of undeclared identifier 'wpT'
+    wpT[iSelf].particle = CLAY_PARTICLE;
+    ^
+D:/Projects/workspace/phygen/resource/OpenCL/interaction/vacuum.hcl:70:9: error: use of undeclared identifier 'wpT'
+        wpT[i].particle = CLAY_PARTICLE;
+        ^
+D:/Projects/workspace/phygen/resource/OpenCL/interaction/vacuum.hcl:91:38: error: use of undeclared identifier 'wpT'
+                vacuum_ClayToVacuum( wpT, wp, i, iNeighbour );
+                                     ^
+In file included from :10:
+D:/Projects/workspace/phygen/resource/OpenCL/interaction.hcl:21:12: error: no member named 'move' in 'WParticle'
+    wpI[i].move = 1;
+    ~~~~~~ ^
+D:/Projects/workspace/phygen/resource/OpenCL/interaction.hcl:43:36: error: incompatible pointer types passing 'WParticle __attribute__((address_space(1))) *' to parameter of type 'WParticleInteraction __attribute__((address_space(1))) *'
+            vacuumSelfInteraction( wpI, wp, x, z, i );
+                                   ^~~
+In file included from :8:
+D:/Projects/workspace/phygen/resource/OpenCL/interaction/vacuum.hcl:26:36: note: passing argument to parameter 'wpI' here
+    __global WParticleInteraction* wpI,
+                                   ^
+In file included from :10:
+D:/Projects/workspace/phygen/resource/OpenCL/interaction.hcl:56:20: error: no member named 'move' in 'WParticle'
+            wpI[i].move = 0;
+            ~~~~~~ ^
+:30:11: error: must use 'enum' tag to refer to type 'RenderWhat'
+    const RenderWhat what,              // @3
+          ^
+          enum
+:34:25: error: parameter may not be qualified with an address space
+    __global WParticle* wpT             // @5
+                        ^
+:35:14: error: expected ')'
+    __global WParticleInteraction* wpI  // @6
+             ^
+:21:21: note: to match this '('
+__kernel void render(
+                    ^
+:57:33: error: incompatible pointer types passing 'WParticle __attribute__((address_space(1))) *' to parameter of type 'Particle __attribute__((address_space(1))) *'
+            calcCharacteristic( wp, p, i );
+                                ^~
+In file included from :4:
+D:/Projects/workspace/phygen/resource/OpenCL/helper.hcl:347:24: note: passing argument to parameter 'p' here
+    __global Particle* p,
+                       ^
+:57:37: error: incompatible pointer types passing 'Particle __attribute__((address_space(1))) *' to parameter of type 'WParticle __attribute__((address_space(1))) *'
+            calcCharacteristic( wp, p, i );
+                                    ^
+In file included from :4:
+D:/Projects/workspace/phygen/resource/OpenCL/helper.hcl:348:25: note: passing argument to parameter 'wp' here
+    __global WParticle* wp,
+                        ^
+:63:30: error: use of undeclared identifier 'wpI'
+            selfInteraction( wpI, wp, x, z, i );
+                             ^
+:70:14: error: use of undeclared identifier 'CORRECT_INTERACTION'; did you mean 'COMMIT_INTERACTION'?
+        case CORRECT_INTERACTION:
+             ^~~~~~~~~~~~~~~~~~~
+             COMMIT_INTERACTION
+In file included from :3:
+D:/Projects/workspace/phygen/resource/OpenCL/struct.hcl:55:5: note: 'COMMIT_INTERACTION' declared here
+    COMMIT_INTERACTION
+    ^
+:71:13: error: implicit declaration of function 'correctInteraction' is invalid in C99
+            correctInteraction( wpI, wp, x, z, i );
+            ^
+:71:33: error: use of undeclared identifier 'wpI'
+            correctInteraction( wpI, wp, x, z, i );
+                                ^
+:75:13: error: implicit declaration of function 'tempCommitInteraction' is invalid in C99
+            tempCommitInteraction( wp, wpI, i );
+            ^
+:75:40: error: use of undeclared identifier 'wpI'
+            tempCommitInteraction( wp, wpI, i );
+                                       ^
+:79:21: error: use of undeclared identifier 'wpI'
+            wp[i] = wpI[i];
+                    ^
+:78:14: error: duplicate case value '5'
+        case COMMIT_INTERACTION:
+             ^
+:70:14: note: previous case defined here
+        case CORRECT_INTERACTION:
+             ^
+:86:31: error: incompatible pointer types passing 'WParticle __attribute__((address_space(1))) *' to parameter of type 'Particle __attribute__((address_space(1))) *'
+    imageWParticle( imageOut, wp, p, i );
+                              ^~
+In file included from :5:
+D:/Projects/workspace/phygen/resource/OpenCL/image.hcl:7:24: note: passing argument to parameter 'p' here
+    __global Particle* p,
+                       ^
+:86:35: error: incompatible pointer types passing 'Particle __attribute__((address_space(1))) *' to parameter of type 'WParticle __attribute__((address_space(1))) *'
+    imageWParticle( imageOut, wp, p, i );
+                                  ^
+In file included from :5:
+D:/Projects/workspace/phygen/resource/OpenCL/image.hcl:8:25: note: passing argument to parameter 'wp' here
+    __global WParticle* wp,
+                        ^
+
+-----------------------------------------------------------
+
+
+-----------------------------------------------------------
+
+Program Binary:
+¤¤¤¤ллллллллю■ю■
+-----------------------------------------------------------
+

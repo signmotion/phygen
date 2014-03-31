@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "phygen", "phygen.vcxproj", "{807D5800-EB5C-4383-B036-68AAD7EB1C39}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F9750D72-D315-4F81-AF1B-10938220FFB3} = {F9750D72-D315-4F81-AF1B-10938220FFB3}
+		{BF58727A-D088-4911-8A40-74DFD600AD30} = {BF58727A-D088-4911-8A40-74DFD600AD30}
+		{EDD01AC4-CD0B-4991-883F-459993D53B1F} = {EDD01AC4-CD0B-4991-883F-459993D53B1F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "U", "..\2d3-u\2d3-u.vcxproj", "{EDD01AC4-CD0B-4991-883F-459993D53B1F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shrUtils", "..\..\..\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 4.0\shared\shrUtils_vs2010.vcxproj", "{F9750D72-D315-4F81-AF1B-10938220FFB3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BF58727A-D088-4911-8A40-74DFD600AD30} = {BF58727A-D088-4911-8A40-74DFD600AD30}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "oclUtils", "..\..\..\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 4.0\OpenCL\common\oclUtils_vs2010.vcxproj", "{BF58727A-D088-4911-8A40-74DFD600AD30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{807D5800-EB5C-4383-B036-68AAD7EB1C39}.Debug|Win32.ActiveCfg = Debug|Win32
+		{807D5800-EB5C-4383-B036-68AAD7EB1C39}.Debug|Win32.Build.0 = Debug|Win32
+		{807D5800-EB5C-4383-B036-68AAD7EB1C39}.Release|Win32.ActiveCfg = Release|Win32
+		{807D5800-EB5C-4383-B036-68AAD7EB1C39}.Release|Win32.Build.0 = Release|Win32
+		{EDD01AC4-CD0B-4991-883F-459993D53B1F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EDD01AC4-CD0B-4991-883F-459993D53B1F}.Debug|Win32.Build.0 = Debug|Win32
+		{EDD01AC4-CD0B-4991-883F-459993D53B1F}.Release|Win32.ActiveCfg = Release|Win32
+		{EDD01AC4-CD0B-4991-883F-459993D53B1F}.Release|Win32.Build.0 = Release|Win32
+		{F9750D72-D315-4F81-AF1B-10938220FFB3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F9750D72-D315-4F81-AF1B-10938220FFB3}.Debug|Win32.Build.0 = Debug|Win32
+		{F9750D72-D315-4F81-AF1B-10938220FFB3}.Release|Win32.ActiveCfg = Release|Win32
+		{F9750D72-D315-4F81-AF1B-10938220FFB3}.Release|Win32.Build.0 = Release|Win32
+		{BF58727A-D088-4911-8A40-74DFD600AD30}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BF58727A-D088-4911-8A40-74DFD600AD30}.Debug|Win32.Build.0 = Debug|Win32
+		{BF58727A-D088-4911-8A40-74DFD600AD30}.Release|Win32.ActiveCfg = Release|Win32
+		{BF58727A-D088-4911-8A40-74DFD600AD30}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
